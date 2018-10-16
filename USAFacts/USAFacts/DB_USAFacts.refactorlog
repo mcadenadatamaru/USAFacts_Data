@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="009af252-0efe-4367-b17d-867980e183a1" ChangeDateTime="04/07/2018 21:06:30">
+    <Property Name="ElementName" Value="[Finance].[BalanceSheets].[Balance sheets]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[BalanceSheets]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[BalanceSheets]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4138b345-e69f-4d15-b911-dfcf51481d11" ChangeDateTime="04/07/2018 21:16:04">
+    <Property Name="ElementName" Value="[Finance].[ExpendituresByFunction].[Sub function]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[ExpendituresByFunction]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[SubFunction]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2cb4adb4-3915-44e1-92d5-f103da0f3924" ChangeDateTime="04/07/2018 21:16:18">
+    <Property Name="ElementName" Value="[Finance].[ExpendituresByFunction].[Expenditures ]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[ExpendituresByFunction]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Expenditures]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1d08fdfe-0d80-4c51-aa16-ad43a36f00d3" ChangeDateTime="04/07/2018 21:16:47">
+    <Property Name="ElementName" Value="[Finance].[ExpendituresBySegment].[Segment 1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[ExpendituresBySegment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segment1]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8aff115e-25e5-4105-bbe7-51f93d336fc4" ChangeDateTime="04/07/2018 21:16:57">
+    <Property Name="ElementName" Value="[Finance].[ExpendituresBySegment].[Segment 2]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[ExpendituresBySegment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segment2]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="085a9fcc-267c-4f10-ad82-1d417de3ee59" ChangeDateTime="04/07/2018 21:17:08">
+    <Property Name="ElementName" Value="[Finance].[ExpendituresBySegment].[Segment 3]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[ExpendituresBySegment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segment3]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6b0b4cda-f7d1-497d-9e64-d7d0337785f6" ChangeDateTime="04/07/2018 21:17:18">
+    <Property Name="ElementName" Value="[Finance].[ExpendituresBySegment].[Segment 4]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[ExpendituresBySegment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segment4]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3477e12d-bdad-4b1b-bca6-e89e123098e4" ChangeDateTime="04/07/2018 21:17:31">
+    <Property Name="ElementName" Value="[Finance].[ExpendituresBySegment].[Expenditures ]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[ExpendituresBySegment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Expenditures]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="42f89553-5747-4e6a-a591-4a702ec27441" ChangeDateTime="04/07/2018 21:17:53">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2a64554c-7109-456b-8a90-a0447b4afbc3" ChangeDateTime="04/07/2018 21:18:04">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[State code]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[StateCode]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3682c4b4-3de8-4957-9131-3105e796003b" ChangeDateTime="04/07/2018 21:18:20">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Census code]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[CensusCode]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d89db202-942f-4397-89b7-b03aa11b1a97" ChangeDateTime="04/07/2018 21:18:33">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Census description]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[CensusDescription]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bb3a26ed-d76a-4c07-9cf2-c1556d04d12e" ChangeDateTime="04/07/2018 21:18:51">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Segment 1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segmen1]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b4e29748-ef42-4069-ac6e-d0ff32c1706e" ChangeDateTime="04/07/2018 21:19:00">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Segment 2]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segment2]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1a94e964-fad2-40c0-9685-4f04c32c99e0" ChangeDateTime="04/07/2018 21:19:09">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Segment 3]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segment3]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa7ba816-b308-4644-adce-42c2c30636ac" ChangeDateTime="04/07/2018 21:19:21">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Segment 4]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Segment4]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="facb2980-2111-4f73-8ed6-82550788d65d" ChangeDateTime="04/07/2018 21:19:39">
+    <Property Name="ElementName" Value="[Finance].[GovermentFinance].[Value ]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[GovermentFinance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Value]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fe48fc9d-ed5a-424a-9c77-28dca7e6ffc2" ChangeDateTime="04/07/2018 21:21:04">
+    <Property Name="ElementName" Value="[Finance].[Inflation].[Inflation adjustment to 2015 dollars]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[Inflation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[InflationAdjustmentTo2015Dollars]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="85d30acd-1c79-4eee-943b-40cd522cce21" ChangeDateTime="04/07/2018 21:21:40">
+    <Property Name="ElementName" Value="[Finance].[Population].[State Code]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[Population]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[StateCode]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5d43af4b-cd40-4e44-bfbc-8bbf9c2b9f13" ChangeDateTime="04/07/2018 21:21:53">
+    <Property Name="ElementName" Value="[Finance].[Population].[State ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[Population]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[StateId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="83bc3fff-df13-48c4-b40a-5e807ce44754" ChangeDateTime="04/07/2018 21:22:18">
+    <Property Name="ElementName" Value="[Finance].[Revenues].[Revenue type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[Revenues]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[RevenueType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3bb3281b-8fd9-4173-8934-ecd982880fc3" ChangeDateTime="04/07/2018 21:22:27">
+    <Property Name="ElementName" Value="[Finance].[Revenues].[Source 1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[Revenues]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Source1]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="405ee7c8-2115-4136-8f87-0abfcfec2d67" ChangeDateTime="04/07/2018 21:22:35">
+    <Property Name="ElementName" Value="[Finance].[Revenues].[Source 2]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[Revenues]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Source2]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1a9a62b8-3995-46d5-9df6-2dc3253a3642" ChangeDateTime="04/07/2018 21:22:44">
+    <Property Name="ElementName" Value="[Finance].[Revenues].[Source 3]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Finance].[Revenues]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Source3]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="086ec841-5354-4299-97a3-1035f5defc20" ChangeDateTime="04/07/2018 21:23:52">
+    <Property Name="ElementName" Value="[Property].[FederalLand].[State Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[StateName]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5900a271-4040-40f7-95ab-5983a25deb3f" ChangeDateTime="04/07/2018 21:24:02">
+    <Property Name="ElementName" Value="[Property].[FederalLand].[State ]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[State]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3eb62c93-62bd-431f-ba07-701501bb3230" ChangeDateTime="04/07/2018 21:24:09">
+    <Property Name="ElementName" Value="[Property].[FederalLand].[State Code]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[StateCode]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fc5f2ec7-39b3-41ac-8ea1-817842b3ea3e" ChangeDateTime="04/07/2018 21:24:25">
+    <Property Name="ElementName" Value="[Property].[FederalLand].[Total Federal Acreage]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[TotalFederalAcreage]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9d07f485-3521-415e-9964-f9c1741c1f86" ChangeDateTime="04/07/2018 21:24:43">
+    <Property Name="ElementName" Value="[Property].[FederalLand].[Total Acreage in State]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[TotalAcreageInState]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3a73a75d-8980-4182-b048-478966c3c9e4" ChangeDateTime="04/07/2018 21:25:16">
+    <Property Name="ElementName" Value="[Property].[FederalLandHistory].[State Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLandHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[StateName]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8451c75c-0582-462e-b4b1-3fa3822afb0e" ChangeDateTime="04/07/2018 21:25:29">
+    <Property Name="ElementName" Value="[Property].[FederalLandHistory].[State ]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLandHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[State]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c2f87da1-7514-47ad-b97b-a60b031b5eb2" ChangeDateTime="04/07/2018 21:25:43">
+    <Property Name="ElementName" Value="[Property].[FederalLandHistory].[State Code]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Property].[FederalLandHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[StateCode]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a45de682-344a-450e-a0c2-fdef65aa8bbe" ChangeDateTime="04/07/2018 21:27:07">
+    <Property Name="ElementName" Value="[Treasury].[AccountPayable].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[AccountPayable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fcde7f11-c35c-4af1-a981-3df46b78b1f9" ChangeDateTime="04/07/2018 21:27:40">
+    <Property Name="ElementName" Value="[Treasury].[AccountPayable].[Accounts payable (In billions of dollars)]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[AccountPayable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[AccountsPayable(In billions of dollars)]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="716bb95e-deb3-40cc-a522-e98741ac880c" ChangeDateTime="04/07/2018 21:27:58">
+    <Property Name="ElementName" Value="[Treasury].[AccountReceivable].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[AccountReceivable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="89ce7db5-e35b-4ab2-90f9-9c1f4bee6a0f" ChangeDateTime="04/07/2018 21:28:53">
+    <Property Name="ElementName" Value="[Treasury].[AccountReceivable].[Accounts and taxes receivable, net (In billions of dollars)]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[AccountReceivable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[AccountsAndTaxesReceivableNet(In billions of dollars)]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c015d91a-45c6-4bf2-be1b-cd96e4e6e0aa" ChangeDateTime="04/07/2018 21:29:42">
+    <Property Name="ElementName" Value="[Treasury].[Benefit].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Benefit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="79e5eefb-8728-4448-b2ad-7be88aad009e" ChangeDateTime="04/07/2018 21:30:16">
+    <Property Name="ElementName" Value="[Treasury].[Benefit].[Benefits due and payable (In billions of dollars)]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Benefit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[BenefitsDueAndPayable(In billions of dollars)]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="20e61f95-b9ac-4617-9881-1a0a877b529b" ChangeDateTime="04/07/2018 21:30:59">
+    <Property Name="ElementName" Value="[Treasury].[Commitment].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Commitment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d37ca361-404b-422b-b560-1ce92413d0e4" ChangeDateTime="04/07/2018 21:31:09">
+    <Property Name="ElementName" Value="[Treasury].[Commitment].[Commitments (In billions of dollars)]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Commitment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Commitments(In billions of dollars)]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5536131a-1aee-46cf-ad7d-c789eb279204" ChangeDateTime="04/07/2018 21:31:46">
+    <Property Name="ElementName" Value="[Treasury].[Contingency].[Category 2]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Contingency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Category2]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e2d0f23b-19ef-452f-9c21-166ad8816dad" ChangeDateTime="04/07/2018 21:31:56">
+    <Property Name="ElementName" Value="[Treasury].[Contingency].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Contingency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3609db01-e6e9-4820-866d-f1a0eb92afa0" ChangeDateTime="04/07/2018 21:32:44">
+    <Property Name="ElementName" Value="[Treasury].[DedicatedCollection].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[DedicatedCollection]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4840fec6-1f74-4b8b-9f31-3adb63ad518c" ChangeDateTime="04/07/2018 21:33:06">
+    <Property Name="ElementName" Value="[Treasury].[EnvironmentalLiability].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[EnvironmentalLiability]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="012df1f2-07d0-4c0d-bc51-2baf29f8ebb4" ChangeDateTime="04/07/2018 21:34:06">
+    <Property Name="ElementName" Value="[Treasury].[FederalEmployee].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[FederalEmployee]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d0855f24-ecb3-4df0-bd59-384e90204710" ChangeDateTime="04/07/2018 21:34:21">
+    <Property Name="ElementName" Value="[Treasury].[FederalDebt].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[FederalDebt]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a61b7c92-e188-4253-813b-74b9507f4809" ChangeDateTime="04/07/2018 21:34:49">
+    <Property Name="ElementName" Value="[Treasury].[GSE].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[GSE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="39e0ed23-1b2a-4691-8aa5-7cd025b4e382" ChangeDateTime="04/07/2018 21:35:09">
+    <Property Name="ElementName" Value="[Treasury].[Insurance].[RohHash]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Insurance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RowHash" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3c6d8654-e11a-4d02-a308-078670e8d80e" ChangeDateTime="04/07/2018 21:35:19">
+    <Property Name="ElementName" Value="[Treasury].[Insurance].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Insurance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="37da3a40-943b-4ee0-8bc7-a5abcffab668" ChangeDateTime="04/07/2018 21:35:32">
+    <Property Name="ElementName" Value="[Treasury].[Inventory].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Inventory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75baafd7-139f-4c3d-84d0-24084d396ef6" ChangeDateTime="04/07/2018 21:36:26">
+    <Property Name="ElementName" Value="[Treasury].[LoanReceivable].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[LoanReceivable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2c120c7d-0138-49fd-9662-b5928a0ee83e" ChangeDateTime="04/07/2018 21:36:40">
+    <Property Name="ElementName" Value="[Treasury].[MonetaryAsset].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[MonetaryAsset]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ccb06d43-bdec-4e00-a8ab-ae986372e31a" ChangeDateTime="04/07/2018 21:37:06">
+    <Property Name="ElementName" Value="[Treasury].[OtherAsset].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[OtherAsset]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmenType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9d068b8e-f284-4a72-b44a-2791977580b2" ChangeDateTime="04/07/2018 21:37:32">
+    <Property Name="ElementName" Value="[Treasury].[OtherLiability].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[OtherLiability]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="90d0d85b-229c-4aea-9d31-d84e98f795e2" ChangeDateTime="04/07/2018 21:38:15">
+    <Property Name="ElementName" Value="[Treasury].[Property].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Property]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fe93fb9f-f5a8-4c1f-8cfc-04901c0d9727" ChangeDateTime="04/07/2018 21:38:27">
+    <Property Name="ElementName" Value="[Treasury].[Security].[Government Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Treasury].[Security]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[GovernmentType]" />
+  </Operation>
+</Operations>

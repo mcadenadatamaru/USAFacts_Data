@@ -1,0 +1,14 @@
+﻿CREATE SCHEMA [PBI]
+    AUTHORIZATION [dbo];
+
+
+
+
+
+
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PBI] TO [pbiuser];
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="usafacts.database.windows.net.usafacts.usafacts"
+  DTS:DTSID="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=usafacts.database.windows.net;User ID=usafacts;Initial Catalog=usafacts;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUyQsctmzE0erRL6fQMDQqwAAAAACAAAAAAADZgAAwAAAABAAAABM9mOuBtePHVmHcePdiIvvAAAAAASAAACgAAAAEAAAANuD3ua/8MMCOzeZqiLyoN+AAAAAt2h9H2fwEv7iwAqf10tDohxGRW/vM83q6GHprRJkjpeIwg5ru5y+SgZdWTySAes0GwQ464OP2/EFJOovUJQG8ll9MI85hCyuUHUUfNGGPh8KY0jShNXbgSmXHxpoTHIhglaumIcIRowjmPzFQlbsVv6seB4fAuiYkoTpvrfJMvIUAAAAQLtFIyd3Y6PrgwHh75Rcp+nphqQ=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

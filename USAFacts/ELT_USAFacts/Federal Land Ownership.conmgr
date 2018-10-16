@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Federal Land Ownership"
+  DTS:DTSID="{6D08CAFF-48D7-4001-AF0C-F768125CE370}"
+  DTS:CreationName="EXCEL">
+  <DTS:PropertyExpression
+    DTS:Name="ExcelFilePath">@[$Project::DataSourcePath] + (DT_STR, 10, 1252) @[$Project::FileVersionId] + "\\Federal Land Ownership.xlsx"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.15.0;Data Source=C:\Users\Mauricio\source\repos\USAFacts\USAFacts\DataSource\20180320\Federal Land Ownership.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

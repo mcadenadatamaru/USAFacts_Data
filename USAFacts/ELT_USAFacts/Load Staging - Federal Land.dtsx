@@ -1,0 +1,1120 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/19/2018 8:05:28 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-0TVOUEI"
+  DTS:CreatorName="DESKTOP-0TVOUEI\Mauricio"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{2B1216AD-6684-43B4-944E-130A796FE9F9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.92"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Load Staging - Federal Land"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{3AA05D6D-D9EC-4849-A25C-4F5AFFE69170}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionExcel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{05BFAABB-3ABD-42B9-A8DD-782958A78A1A}"
+      DTS:ObjectName="SourceConnectionExcel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Mauricio\source\repos\USAFacts\USAFacts\DataSource\20180320\Federal Land Ownership.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DTF - Load Staging -"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{76EA01CD-0FB1-45D2-8007-5A25E7C63CF6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DTF - Load Staging -"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - Federal land ownership changes"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Staging].[Federal land ownership changes]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Connections[OleDbConnection]"
+                  connectionManagerID="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[usafacts.database.windows.net.usafacts.usafacts]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[State Name]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].Columns[State ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State "
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[State ]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State ]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].Columns[State Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[State Code]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].Columns[1990]"
+                      cachedDataType="r8"
+                      cachedName="1990"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[1990]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[1990]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].Columns[2000]"
+                      cachedDataType="r8"
+                      cachedName="2000"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[2000]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2000]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].Columns[2010]"
+                      cachedDataType="r8"
+                      cachedName="2010"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[2010]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2010]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].Columns[2015]"
+                      cachedDataType="r8"
+                      cachedName="2015"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[2015]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2015]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[State ]"
+                      dataType="wstr"
+                      length="255"
+                      name="State " />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[State Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[1990]"
+                      dataType="r8"
+                      name="1990" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[2000]"
+                      dataType="r8"
+                      name="2000" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[2010]"
+                      dataType="r8"
+                      name="2010" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input].ExternalColumns[2015]"
+                      dataType="r8"
+                      name="2015" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination 1 - Federal owned land"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Staging].[Federal owned land]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Connections[OleDbConnection]"
+                  connectionManagerID="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[usafacts.database.windows.net.usafacts.usafacts]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[State Name]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[State ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State "
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[State ]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State ]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[State Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[State Code]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[BLM]"
+                      cachedDataType="r8"
+                      cachedName="BLM"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[BLM]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[BLM]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[FS]"
+                      cachedDataType="r8"
+                      cachedName="FS"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[FS]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[FS]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[FWS]"
+                      cachedDataType="r8"
+                      cachedName="FWS"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[FWS]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[FWS]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[NPS]"
+                      cachedDataType="r8"
+                      cachedName="NPS"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[NPS]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[NPS]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[DOD]"
+                      cachedDataType="r8"
+                      cachedName="DOD"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[DOD]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[DOD]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[Total Federal Acreage]"
+                      cachedDataType="r8"
+                      cachedName="Total Federal Acreage"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[Total Federal Acreage]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[Total Federal Acreage]" />
+                    <inputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].Columns[Total Acreage in State]"
+                      cachedDataType="r8"
+                      cachedName="Total Acreage in State"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[Total Acreage in State]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[Total Acreage in State]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[State ]"
+                      dataType="wstr"
+                      length="255"
+                      name="State " />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[State Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[BLM]"
+                      dataType="r8"
+                      name="BLM" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[FS]"
+                      dataType="r8"
+                      name="FS" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[FWS]"
+                      dataType="r8"
+                      name="FWS" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[NPS]"
+                      dataType="r8"
+                      name="NPS" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[DOD]"
+                      dataType="r8"
+                      name="DOD" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[Total Federal Acreage]"
+                      dataType="r8"
+                      name="Total Federal Acreage" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input].ExternalColumns[Total Acreage in State]"
+                      dataType="r8"
+                      name="Total Acreage in State" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Source - 'Federal land ownership changes$'"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Federal land ownership changes$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionExcel]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[State Name]"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[State ]"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State ]"
+                      name="State "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[State Code]"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[1990]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[1990]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[1990]"
+                      name="1990"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2000]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[2000]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2000]"
+                      name="2000"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2010]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[2010]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2010]"
+                      name="2010"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2015]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[2015]"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].Columns[2015]"
+                      name="2015"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[State ]"
+                      dataType="wstr"
+                      length="255"
+                      name="State " />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[State Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[1990]"
+                      dataType="r8"
+                      name="1990" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[2000]"
+                      dataType="r8"
+                      name="2000" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[2010]"
+                      dataType="r8"
+                      name="2010" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output].ExternalColumns[2015]"
+                      dataType="r8"
+                      name="2015" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[State Name]"
+                      name="State Name" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[State ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[State ]"
+                      name="State " />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[State Code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[State Code]"
+                      name="State Code" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[1990]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[1990]"
+                      name="1990" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[2000]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[2000]"
+                      name="2000" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[2010]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[2010]"
+                      name="2010" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[2015]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[2015]"
+                      name="2015" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Source 1 - 'Federal owned land$'"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Federal owned land$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionExcel]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[State Name]"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[State ]"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State ]"
+                      name="State "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[State Code]"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[BLM]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[BLM]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[BLM]"
+                      name="BLM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[FS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[FS]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[FS]"
+                      name="FS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[FWS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[FWS]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[FWS]"
+                      name="FWS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[NPS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[NPS]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[NPS]"
+                      name="NPS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[DOD]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[DOD]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[DOD]"
+                      name="DOD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[Total Federal Acreage]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[Total Federal Acreage]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[Total Federal Acreage]"
+                      name="Total Federal Acreage"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[Total Acreage in State]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[Total Acreage in State]"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].Columns[Total Acreage in State]"
+                      name="Total Acreage in State"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[State ]"
+                      dataType="wstr"
+                      length="255"
+                      name="State " />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[State Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[BLM]"
+                      dataType="r8"
+                      name="BLM" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[FS]"
+                      dataType="r8"
+                      name="FS" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[FWS]"
+                      dataType="r8"
+                      name="FWS" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[NPS]"
+                      dataType="r8"
+                      name="NPS" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[DOD]"
+                      dataType="r8"
+                      name="DOD" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[Total Federal Acreage]"
+                      dataType="r8"
+                      name="Total Federal Acreage" />
+                    <externalMetadataColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output].ExternalColumns[Total Acreage in State]"
+                      dataType="r8"
+                      name="Total Acreage in State" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[State Name]"
+                      name="State Name" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[State ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[State ]"
+                      name="State " />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[State Code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[State Code]"
+                      name="State Code" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[BLM]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[BLM]"
+                      name="BLM" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[FS]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[FS]"
+                      name="FS" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[FWS]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[FWS]"
+                      name="FWS" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[NPS]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[NPS]"
+                      name="NPS" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[DOD]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[DOD]"
+                      name="DOD" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[Total Federal Acreage]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[Total Federal Acreage]"
+                      name="Total Federal Acreage" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[Total Acreage in State]"
+                      dataType="r8"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[Total Acreage in State]"
+                      name="Total Acreage in State" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DTF - Load Staging -.Paths[Excel Source Output]"
+              endId="Package\DTF - Load Staging -\Destination - Federal land ownership changes.Inputs[Destination Input]"
+              name="Excel Source Output"
+              startId="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\DTF - Load Staging -.Paths[Excel Source Output1]"
+              endId="Package\DTF - Load Staging -\Destination 1 - Federal owned land.Inputs[Destination Input]"
+              name="Excel Source Output"
+              startId="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Prepare Staging Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{E390BAD9-95C1-4C81-9050-071228291591}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Prepare Staging Tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+          SQLTask:SqlStatementSource="CREATE TABLE [Staging].[Federal land ownership changes] (&#xA;[State Name] nvarchar(255),&#xA;[State ] nvarchar(255),&#xA;[State Code] nvarchar(255),&#xA;[1990] float,&#xA;[2000] float,&#xA;[2010] float,&#xA;[2015] float&#xA;)&#xA;GO&#xA;CREATE TABLE [Staging].[Federal owned land] (&#xA;[State Name] nvarchar(255),&#xA;[State ] nvarchar(255),&#xA;[State Code] nvarchar(255),&#xA;[BLM] float,&#xA;[FS] float,&#xA;[FWS] float,&#xA;[NPS] float,&#xA;[DOD] float,&#xA;[Total Federal Acreage] float,&#xA;[Total Acreage in State] float&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{F08D53D2-A0D7-40C2-BE47-9D0478188B1B\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{F08D53D2-A0D7-40C2-BE47-9D0478188B1B}"
+      DTS:From="Package\SQL - Prepare Staging Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{F08D53D2-A0D7-40C2-BE47-9D0478188B1B}"
+      DTS:To="Package\DTF - Load Staging -" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\DTF - Load Staging -"
+          TopLeft="20.1666666666667,108.166666666667" />
+        <NodeLayout
+          Size="217.333333333334,42.6666666666667"
+          Id="Package\SQL - Prepare Staging Tables"
+          TopLeft="5.50000000000001,5.50000000000004" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{F08D53D2-A0D7-40C2-BE47-9D0478188B1B\}]"
+          TopLeft="111.5,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DTF - Load Staging -">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="234.666666666667,42.6666666666667"
+          Id="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'"
+          TopLeft="10.1666666666667,5.50000000000004" />
+        <NodeLayout
+          Size="244,42.6666666666667"
+          Id="Package\DTF - Load Staging -\Destination 1 - Federal owned land"
+          TopLeft="5.5,108.166666666667" />
+        <NodeLayout
+          Size="294.666666666667,42.6666666666667"
+          Id="Package\DTF - Load Staging -\Destination - Federal land ownership changes"
+          TopLeft="310.166666666667,108.166666666667" />
+        <NodeLayout
+          Size="284,42.6666666666667"
+          Id="Package\DTF - Load Staging -\Source - 'Federal land ownership changes$'"
+          TopLeft="315.5,5.50000000000004" />
+        <EdgeLayout
+          Id="Package\DTF - Load Staging -.Paths[Excel Source Output1]"
+          TopLeft="127.5,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DTF - Load Staging -.Paths[Excel Source Output]"
+          TopLeft="457.5,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DTF - Load Staging -\Source 1 - 'Federal owned land$'">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DTF - Load Staging -\Destination 1 - Federal owned land">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DTF - Load Staging -\Destination - Federal land ownership changes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

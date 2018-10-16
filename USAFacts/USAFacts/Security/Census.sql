@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Census]
+    AUTHORIZATION [dbo];
+

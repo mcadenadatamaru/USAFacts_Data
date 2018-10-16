@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DB_USAFacts</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{57e950e8-358c-4c54-ae1d-64d1f43142ed}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>USAFacts</RootNamespace>
+    <AssemblyName>USAFacts</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <TargetDatabase>USAFacts</TargetDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SuppressTSqlWarnings>71558</SuppressTSqlWarnings>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Staging\" />
+    <Folder Include="Staging\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="ELT\" />
+    <Folder Include="ELT\Stored Procedures\" />
+    <Folder Include="Treasury\" />
+    <Folder Include="Treasury\Tables\" />
+    <Folder Include="Property\" />
+    <Folder Include="Property\Tables\" />
+    <Folder Include="Finance\" />
+    <Folder Include="Finance\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="PBI\" />
+    <Folder Include="PBI\Stored Procedures\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="PBI\Views\" />
+    <Folder Include="Census\" />
+    <Folder Include="Census\Tables\" />
+    <Folder Include="bls\" />
+    <Folder Include="bls\Tables\" />
+    <Folder Include="Census\Stored Procedures\" />
+    <Folder Include="bls\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Staging\Tables\Note 10.sql" />
+    <Build Include="Staging\Tables\Note 11.sql" />
+    <Build Include="Staging\Tables\Note 12.sql" />
+    <Build Include="Staging\Tables\Note 13.sql" />
+    <Build Include="Staging\Tables\Note 14.sql" />
+    <Build Include="Staging\Tables\Note 15.sql" />
+    <Build Include="Staging\Tables\Note 16.sql" />
+    <Build Include="Staging\Tables\Note 18.sql" />
+    <Build Include="Staging\Tables\Note 19.sql" />
+    <Build Include="Staging\Tables\Note 2.sql" />
+    <Build Include="Staging\Tables\Note 20.sql" />
+    <Build Include="Staging\Tables\Note 21.sql" />
+    <Build Include="Staging\Tables\Note 3.sql" />
+    <Build Include="Staging\Tables\Note 4.sql" />
+    <Build Include="Staging\Tables\Note 5.sql" />
+    <Build Include="Staging\Tables\Note 6.sql" />
+    <Build Include="Staging\Tables\Note 7.sql" />
+    <Build Include="Staging\Tables\Note 8.sql" />
+    <Build Include="Staging\Tables\Note 9.sql" />
+    <Build Include="Staging\Tables\Federal land ownership changes.sql" />
+    <Build Include="Staging\Tables\Federal owned land.sql" />
+    <Build Include="Staging\Tables\Balance sheets.sql" />
+    <Build Include="Staging\Tables\Expenditures by function.sql" />
+    <Build Include="Staging\Tables\Expenditures by segment.sql" />
+    <Build Include="Staging\Tables\Federal and S_L government P_L.sql" />
+    <Build Include="Staging\Tables\Inflation.sql" />
+    <Build Include="Staging\Tables\Population.sql" />
+    <Build Include="Staging\Tables\Revenues.sql" />
+    <Build Include="Staging\Tables\FunctionalPnL.sql" />
+    <Build Include="Staging\Tables\MasterPnL.sql" />
+    <Build Include="Staging\Tables\PopulationDim.sql" />
+    <Build Include="Staging\Tables\YearDim.sql" />
+    <Build Include="dbo\Tables\DimYear.sql" />
+    <Build Include="dbo\Tables\DimState.sql" />
+    <Build Include="dbo\Tables\FactPopulation.sql" />
+    <Build Include="Security\pbiuser.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_YearDim.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_PopulationFact.sql" />
+    <Build Include="Security\ELT.sql" />
+    <Build Include="Security\PBI.sql" />
+    <Build Include="Security\Staging.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Property_FederalLandHistory.sql" />
+    <Build Include="Treasury\Tables\FiduciaryActivity.sql" />
+    <Build Include="Treasury\Tables\DedicatedCollection.sql" />
+    <Build Include="Treasury\Tables\Commitment.sql" />
+    <Build Include="Treasury\Tables\Contingency.sql" />
+    <Build Include="Treasury\Tables\OtherLiability.sql" />
+    <Build Include="Treasury\Tables\Insurance.sql" />
+    <Build Include="Treasury\Tables\Benefit.sql" />
+    <Build Include="Treasury\Tables\EnvironmentalLiability.sql" />
+    <Build Include="Treasury\Tables\FederalEmployee.sql" />
+    <Build Include="Treasury\Tables\FederalDebt.sql" />
+    <Build Include="Treasury\Tables\AccountPayable.sql" />
+    <Build Include="Treasury\Tables\OtherAsset.sql" />
+    <Build Include="Treasury\Tables\GSE.sql" />
+    <Build Include="Treasury\Tables\Security.sql" />
+    <Build Include="Treasury\Tables\Property.sql" />
+    <Build Include="Treasury\Tables\Inventory.sql" />
+    <Build Include="Treasury\Tables\LoanReceivable.sql" />
+    <Build Include="Treasury\Tables\AccountReceivable.sql" />
+    <Build Include="Treasury\Tables\MonetaryAsset.sql" />
+    <Build Include="Finance\Tables\Inflation.sql" />
+    <Build Include="Finance\Tables\Population.sql" />
+    <Build Include="Finance\Tables\BalanceSheets.sql" />
+    <Build Include="Finance\Tables\ExpendituresByFunction.sql" />
+    <Build Include="Finance\Tables\ExpendituresBySegment.sql" />
+    <Build Include="Finance\Tables\Revenues.sql" />
+    <Build Include="PBI\Stored Procedures\usp_10K_FederalOwnedLand.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_GovermentFinance.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_ExpendituresByFunction.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_BalanceSheets.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Property_FederalLand.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetErrorInfo.sql" />
+    <Build Include="Security\Treasury.sql" />
+    <Build Include="Security\Property.sql" />
+    <Build Include="Security\Finance.sql" />
+    <Build Include="Property\Tables\FederalLandHistory.sql" />
+    <Build Include="Property\Tables\FederalLand.sql" />
+    <Build Include="Finance\Tables\GovermentFinance.sql" />
+    <Build Include="PBI\Stored Procedures\usp_10K_GovermentFinance.sql" />
+    <Build Include="PBI\Stored Procedures\usp_10K_ExpendituresByFunction.sql" />
+    <Build Include="PBI\Stored Procedures\usp_10K_BalanceSheets.sql" />
+    <Build Include="dbo\Functions\get_hash_fields_1.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_ExpendituresBySegment.sql" />
+    <Build Include="PBI\Views\vw_10K_Property_FederalLandHistory.sql" />
+    <Build Include="PBI\Views\vw_10K_Property_FederalLand.sql" />
+    <Build Include="PBI\Views\vw_10K_Finance_Revenues.sql" />
+    <Build Include="PBI\Views\vw_10K_Finance_Population.sql" />
+    <Build Include="PBI\Views\vw_10K_Finance_Inflation.sql" />
+    <Build Include="PBI\Views\vw_10K_Finance_GovermentFinance.sql" />
+    <Build Include="PBI\Views\vw_10K_Finance_FederalOwnedLand.sql" />
+    <Build Include="PBI\Views\vw_10K_Finance_ExpendituresByFunction.sql" />
+    <Build Include="PBI\Views\vw_10K_Finance_BalanceSheets.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_Security.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_Property.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_OtherLiability.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_OtherAsset.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_MonetaryAsset.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_LoanReceivable.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_Inventory.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_Insurance.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_GSE.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_FiduciaryActivity.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_FederalEmployee.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_FederalDebt.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_EnvironmentalLiability.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_DedicatedCollection.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_Contingency.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_Commitment.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_Benefit.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_AccountReceivable.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Treasury_AccountPayable.sql" />
+    <Build Include="dbo\Tables\Employment_.sql" />
+    <Build Include="dbo\Tables\ELT_Mapping.sql" />
+    <Build Include="Census\Tables\Finance.sql" />
+    <Build Include="Census\Tables\Finance_2014.sql" />
+    <Build Include="Census\Tables\Finance_2013.sql" />
+    <Build Include="Census\Tables\Finance_2012.sql" />
+    <Build Include="Census\Tables\Finance_2015.sql" />
+    <Build Include="Census\Tables\USAFactsMapping.sql" />
+    <Build Include="bls\Tables\CES2000000003.sql" />
+    <Build Include="bls\Tables\CES2000000001.sql" />
+    <Build Include="bls\Tables\CES1000000001.sql" />
+    <Build Include="bls\Tables\CES0500000003.sql" />
+    <Build Include="bls\Tables\CES0000000001.sql" />
+    <Build Include="bls\Tables\DataMapping.sql" />
+    <Build Include="bls\Tables\LNU05026645.sql" />
+    <Build Include="bls\Tables\LNU05026639.sql" />
+    <Build Include="bls\Tables\LNU02026619.sql" />
+    <Build Include="bls\Tables\LNU00000000.sql" />
+    <Build Include="bls\Tables\LNS15000000.sql" />
+    <Build Include="bls\Tables\LNS13000000.sql" />
+    <Build Include="bls\Tables\LNS12600000.sql" />
+    <Build Include="bls\Tables\LNS12500000.sql" />
+    <Build Include="bls\Tables\LNS12032194.sql" />
+    <Build Include="bls\Tables\LNS12000000.sql" />
+    <Build Include="bls\Tables\LNS11000000.sql" />
+    <Build Include="bls\Tables\SeriesReports.sql" />
+    <Build Include="bls\Tables\CES1000000003.sql" />
+    <Build Include="bls\Tables\CES8000000003.sql" />
+    <Build Include="bls\Tables\Seriestemp.sql" />
+    <Build Include="bls\Tables\CES8000000001.sql" />
+    <Build Include="bls\Tables\CES7000000003.sql" />
+    <Build Include="bls\Tables\CES7000000001.sql" />
+    <Build Include="bls\Tables\CES6000000003.sql" />
+    <Build Include="bls\Tables\CES6000000001.sql" />
+    <Build Include="bls\Tables\CES5000000003.sql" />
+    <Build Include="bls\Tables\CES5000000001.sql" />
+    <Build Include="bls\Tables\CES4000000003.sql" />
+    <Build Include="bls\Tables\CES4000000001.sql" />
+    <Build Include="bls\Tables\CES3000000003.sql" />
+    <Build Include="bls\Tables\CES3000000001.sql" />
+    <Build Include="PBI\Views\vw_Census_USAFactsMapping.sql" />
+    <Build Include="PBI\Views\vw_Census_Finance.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_Revenues.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_Population.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_Inflation.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TruncateAllTables.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CheckRowCounts.sql" />
+    <Build Include="Census\Stored Procedures\usp_FinanceDataCheck.sql" />
+    <Build Include="bls\Stored Procedures\usp_ProcessSeriesData.sql" />
+    <Build Include="Security\Census.sql" />
+    <Build Include="Security\bls.sql" />
+    <Build Include="Staging\Tables\Finance_GovermentFinancePayload.sql" />
+    <Build Include="Finance\Tables\GovermentFinancePayload.sql" />
+    <Build Include="Security\usafactsreadonly.sql" />
+    <Build Include="Security\USAFactsDBAdmin.sql" />
+    <Build Include="Security\BallmerGroup.sql" />
+    <Build Include="ELT\Stored Procedures\usp_Load_Finance_GovermentFinancePayload.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DB_USAFacts.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB_USAFacts.publish.xml" />
+  </ItemGroup>
+</Project>

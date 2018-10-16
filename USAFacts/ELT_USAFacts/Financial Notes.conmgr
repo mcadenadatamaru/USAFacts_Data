@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Financial Notes"
+  DTS:DTSID="{8BED56D2-DB7F-46D2-806D-7E9855AA3C54}"
+  DTS:CreationName="EXCEL">
+  <DTS:PropertyExpression
+    DTS:Name="ExcelFilePath">@[$Project::DataSourcePath] + (DT_STR, 10, 1252) @[$Project::FileVersionId] + "\\Notes to financial statements.xlsx"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Mauricio\source\repos\USAFacts\USAFacts\DataSource\20180320\Notes to financial statements.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

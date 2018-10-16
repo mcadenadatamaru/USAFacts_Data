@@ -1,0 +1,1744 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/20/2018 1:27:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-0TVOUEI"
+  DTS:CreatorName="DESKTOP-0TVOUEI\Mauricio"
+  DTS:DTSID="{8C0C562F-4864-4FDF-829D-24E5DFF54A76}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.92"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="0 - Master"
+  DTS:PackageType="5"
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{E3072E62-2454-46F9-9DD7-47A2D9F6EB35}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2B806BEF-3CB8-416B-BD33-4CF528C63498}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::FileVersionId]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileVersionId">
+      <DTS:VariableValue
+        DTS:DataType="3">20180320</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{D9F781AF-DAEE-4925-8763-0D0D474EA2DB}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Federal Land"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{937AA3EA-21A7-4B52-8DBA-9D226D8C806F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Federal Land"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Staging - Federal Land.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQC - Finance"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{D8EBB088-1CF7-430E-89C4-52C267F5007C}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQC - Finance">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Finance\Financial Statements"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{06E36736-503A-4BE3-907B-1EA0C330A53B}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Financial Statements"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Staging - Financial Statements.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQC - Load Dimensions"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{d9727137-d850-46a5-9163-08658cc74412}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQC - Load Dimensions">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Load Dimensions\Run 1 - Load DimState"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{36ebe251-cc98-42c9-850b-4e3d5e692fb3}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run 1 - Load DimState"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>1 - Load DimState.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQC - Load Facts"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{73a0dc26-e7aa-4c16-97ac-3772a5a85c25}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQC - Load Facts">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQC - Load Staging"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{E51EBC4B-D78D-49A5-848D-C602201A08BB}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQC - Load Staging">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Load Staging\Financial Notes"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{284ADAC0-A72C-4BD7-915B-C32EE84986B8}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Financial Notes"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Staging - Financial Notes.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQC - Process Finance Tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{9CBFCBC6-5D04-4EA8-B389-05B71CEB927B}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQC - Process Finance Tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Finance Tables\SQL - Process Balance Sheets"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5238995f-f518-40ff-8ee5-46469fed5a40}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Balance Sheets"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Finance_BalanceSheets @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Finance_BalanceSheets @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Project::FileVersionId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Finance Tables\SQL - Process Expenditures by Function"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{841e9322-b83e-41f3-99e9-5fa198fe3da3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Expenditures by Function"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Finance_ExpendituresByFunction @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Finance_ExpendituresByFunction @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Project::FileVersionId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Finance Tables\SQL - Process Expenditures by Segment"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{10D7BFC4-99AD-49A4-97AD-B95807AF9935}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Expenditures by Segment"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC [ELT].[usp_Load_Finance_ExpendituresBySegment] @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC [ELT].[usp_Load_Finance_ExpendituresBySegment] @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Project::FileVersionId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Finance Tables\SQL - Process Goverment Finance"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{06c8caa3-c427-4618-a017-30de23f835bf}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Goverment Finance"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC [ELT].[usp_Load_Finance_GovermentFinance] @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC [ELT].[usp_Load_Finance_GovermentFinance] @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Project::FileVersionId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Finance Tables\SQL - Process Inflation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6D682C81-EE29-44E6-9631-CD2C81DFFA3A}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Inflation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Finance_Inflation @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Finance_Inflation @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Finance Tables\SQL - Process Population"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1DD35EF6-BAA3-4609-94F7-7B8C8E308CC1}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Population"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Finance_Population @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Finance_Population @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Finance Tables\SQL - Process Revenues"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{21951FFD-0BAF-4023-8228-8586C76AD1D3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Revenues"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Finance_Revenues @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Finance_Revenues @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{E3A342EC-DC25-4169-A80D-AA12F8F90D01}"
+          DTS:From="Package\SQC - Process Finance Tables\SQL - Process Balance Sheets"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SQC - Process Finance Tables\SQL - Process Expenditures by Function" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{43095D00-9332-4ABD-9455-92913D2D1BF0}"
+          DTS:From="Package\SQC - Process Finance Tables\SQL - Process Expenditures by Function"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SQC - Process Finance Tables\SQL - Process Expenditures by Segment" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{13BF5575-1A4D-4139-B4EA-E274F2903878}"
+          DTS:From="Package\SQC - Process Finance Tables\SQL - Process Inflation"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SQC - Process Finance Tables\SQL - Process Population" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{CA714910-4BCD-4FD4-88CC-B4CB5D2D5CCF}"
+          DTS:From="Package\SQC - Process Finance Tables\SQL - Process Population"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SQC - Process Finance Tables\SQL - Process Revenues" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQC - Process Property Tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{BBB7A4A9-9BB0-4460-B104-353B483CEC27}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQC - Process Property Tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Property Tables\SQC - Process Federal Land History"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3DF50A8C-62E7-4147-8C97-D2C1BC47188C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQC - Process Federal Land History"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Property_FederalLandHistory @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Property_FederalLandHistory @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Property Tables\SQL - Process Federal Land"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2BE40756-7914-4738-91E9-DACCD8C30319}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Federal Land"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Property_FederalLand @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Property_FederalLand @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQC - Process Treasury Tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{7DA65488-3E02-45DC-B55D-18E6533B2003}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQC - Process Treasury Tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQC - Process AccountPayable"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2a2e3959-5e9f-406e-a473-ac966be21a62}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQC - Process AccountPayable"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_AccountPayable @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_AccountPayable @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process AccountReceivable"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{e28a373f-27b7-4cd1-806f-d687c784e877}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process AccountReceivable"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_AccountReceivable @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_AccountReceivable @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process Benefit"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{c47aa8a2-3897-4cd8-a5d9-03920da9c71f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Benefit"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_Benefit @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_Benefit @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process Commitment"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{c69faee4-eb80-4c81-8c5a-d810822b36d8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Commitment"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_Commitment @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_Commitment @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process Contingency"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{00f860d0-7881-4903-9d1b-3389e0c0232d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Contingency"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_Contingency @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_Contingency @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process DedicatedCollection"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{a185a3a8-911f-444f-9c36-1e501015d466}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process DedicatedCollection"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_DedicatedCollection @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_DedicatedCollection @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process EnvironmentalLiability"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{df5fa5a7-4994-4fdd-a96e-4162b22756d0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process EnvironmentalLiability"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_EnvironmentalLiability @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_EnvironmentalLiability @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process FederalEmployee"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d92906d7-8125-4e61-a68c-38d42baf09c7}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process FederalEmployee"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_FederalEmployee @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_FederalEmployee @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process FiduciaryActivity"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8b592ce7-10d2-4cc0-b15d-1a1fc5680dc3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process FiduciaryActivity"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_FiduciaryActivity @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_FiduciaryActivity @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process GSE"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1139fb48-cf4b-4650-919e-5eab26c389df}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process GSE"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_GSE @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_GSE @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process Inventory"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d916b72e-89d3-48a9-948b-8c95b6a4abe9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Inventory"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_Inventory @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_Inventory @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process Loan Receivable"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{7043d460-d0fc-4030-8409-e222e06087d6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Loan Receivable"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_LoanReceivable @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_LoanReceivable @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process MonetaryAsset"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d74f57bd-cf0b-42e8-b292-7212b6ecf96a}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process MonetaryAsset"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_MonetaryAsset @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_MonetaryAsset @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process OtherAsset"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{da52a9e3-31df-4c50-8af9-86160be59b5e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process OtherAsset"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_OtherAsset @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_OtherAsset @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process OtherLiability"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{b5aaad7a-6bd9-4f28-ad93-7ac7e9454ffd}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process OtherLiability"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_OtherLiability @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_OtherLiability @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process Property"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{11ef0cc9-dc38-4c97-8fc1-ba2057fbab04}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Property"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_Property @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_Property @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL - Process Security"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{e182bca3-9396-433a-a36f-91f536d87fcd}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - Process Security"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_Security @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_Security @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL -Process FederalDebt"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5cceb303-bfc3-4b85-9e68-ce76195fd1d2}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL -Process FederalDebt"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_FederalDebt @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_FederalDebt @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQC - Process Treasury Tables\SQL -Process Insurance"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{9a94ca4d-e417-42a7-9e56-f560348fd1d6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL -Process Insurance"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"EXEC ELT.usp_Load_Treasury_Insurance @FileVersionId = " + (DT_STR, 10, 1252) @[$Project::FileVersionId]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E21B647-BBD0-4711-ABBF-AB146829FCC2}"
+              SQLTask:SqlStatementSource="EXEC ELT.usp_Load_Treasury_Insurance @FileVersionId = 20180320" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{74A30FD6-36C3-4E25-A391-694993C120D1}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQC - Process AccountPayable"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process AccountReceivable" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{54D798C6-C82D-4EE7-9846-D596EEE62E0A}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process AccountReceivable"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process Benefit" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 10]"
+          DTS:CreationName=""
+          DTS:DTSID="{ED5B03F8-EDA9-4F92-B7CD-F148DDAAA27F}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process GSE"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 10"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL -Process Insurance" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 11]"
+          DTS:CreationName=""
+          DTS:DTSID="{B5700C97-D3F4-4A01-836A-18E761E5A07B}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL -Process Insurance"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 11"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process Inventory" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 12]"
+          DTS:CreationName=""
+          DTS:DTSID="{1FFB2F57-0724-435A-B9E1-775B0EE24B75}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process Inventory"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 12"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process Loan Receivable" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 13]"
+          DTS:CreationName=""
+          DTS:DTSID="{AE94FD78-B43A-4404-8D84-5A02EFBDCF4D}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process Loan Receivable"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 13"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process MonetaryAsset" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 14]"
+          DTS:CreationName=""
+          DTS:DTSID="{86DBB643-FE6D-47B3-A456-D06C9EC52C1C}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process MonetaryAsset"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 14"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process OtherAsset" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 15]"
+          DTS:CreationName=""
+          DTS:DTSID="{81EDF664-603A-40CC-9C8A-BA3CD8254D01}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process OtherAsset"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 15"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process OtherLiability" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 16]"
+          DTS:CreationName=""
+          DTS:DTSID="{557C447C-CBCB-4AFD-A08F-98F253A21DAF}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process OtherLiability"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 16"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process Property" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 17]"
+          DTS:CreationName=""
+          DTS:DTSID="{9CBE812B-FF36-4250-9713-99B8427557A6}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process Property"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 17"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process Security" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{08AC27ED-0DDC-4409-BFF9-078669C0B2A5}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process Benefit"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process Commitment" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{0B6F0D05-C6D2-4256-B79E-0BE5A59990C3}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process Commitment"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process Contingency" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{782852F2-729C-4C80-A19F-7970D5CC8184}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process Contingency"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process DedicatedCollection" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{FBEED694-001E-40CB-BDA5-E4A793B30D51}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process DedicatedCollection"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process EnvironmentalLiability" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{55355C40-F02E-4613-B526-DB4A0B52FC30}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process EnvironmentalLiability"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL -Process FederalDebt" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{C7C5A26F-A618-4C87-98E8-A8DD7636944C}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL -Process FederalDebt"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process FederalEmployee" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{20B38C3F-F81E-4CF6-AC0F-9089076099E6}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process FederalEmployee"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process FiduciaryActivity" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 9]"
+          DTS:CreationName=""
+          DTS:DTSID="{B23C1C78-34B9-4C89-977A-5194DCF9587B}"
+          DTS:From="Package\SQC - Process Treasury Tables\SQL - Process FiduciaryActivity"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 9"
+          DTS:To="Package\SQC - Process Treasury Tables\SQL - Process GSE" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4c087b39-ea62-4a6d-a265-7d902c8056e1}"
+      DTS:From="Package\SQC - Load Dimensions"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SQC - Load Facts" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{44EB7CFC-784D-4708-A2F0-D4CDC3D4CBE6}"
+      DTS:From="Package\SQC - Finance"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQC - Process Finance Tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{64897EA5-99F4-42B1-8463-01FF5F2794AA}"
+      DTS:From="Package\SQC - Load Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\SQC - Process Treasury Tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{74ADDA4A-72A7-487F-8FBE-104C4C16766D}"
+      DTS:From="Package\Sequence Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\SQC - Process Property Tables" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186,42"
+          Id="Package\SQC - Load Dimensions\Run 1 - Load DimState"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="197,102"
+          Size="197,146"
+          Id="Package\SQC - Load Dimensions"
+          TopLeft="9.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,55"
+          Size="205,98"
+          Id="Package\SQC - Load Facts"
+          TopLeft="5.5,1153.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\SQC - Load Staging\Financial Notes"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="161,102"
+          Size="161,146"
+          Id="Package\SQC - Load Staging"
+          TopLeft="321.5,5.5" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\SQC - Process Finance Tables\SQL - Process Balance Sheets"
+          TopLeft="30,5.5" />
+        <NodeLayout
+          Size="266,42"
+          Id="Package\SQC - Process Finance Tables\SQL - Process Expenditures by Function"
+          TopLeft="6,107.5" />
+        <NodeLayout
+          Size="267,42"
+          Id="Package\SQC - Process Finance Tables\SQL - Process Expenditures by Segment"
+          TopLeft="5.5,209.5" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\SQC - Process Finance Tables\SQL - Process Goverment Finance"
+          TopLeft="333,209.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\SQC - Process Finance Tables\SQL - Process Inflation"
+          TopLeft="635,5.49999999999989" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\SQC - Process Finance Tables\SQL - Process Population"
+          TopLeft="629.5,107.5" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SQC - Process Finance Tables\SQL - Process Revenues"
+          TopLeft="631.5,209.5" />
+        <EdgeLayout
+          Id="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint]"
+          TopLeft="139,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint 1]"
+          TopLeft="139,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint 3]"
+          TopLeft="728,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Finance Tables.PrecedenceConstraints[Constraint 4]"
+          TopLeft="728,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="832,306"
+          Size="832,350"
+          Id="Package\SQC - Process Finance Tables"
+          TopLeft="593,1027.5" />
+        <NodeLayout
+          Size="245,42"
+          Id="Package\SQC - Process Property Tables\SQC - Process Federal Land History"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\SQC - Process Property Tables\SQL - Process Federal Land"
+          TopLeft="311,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="524,102"
+          Size="524,146"
+          Id="Package\SQC - Process Property Tables"
+          TopLeft="1486,1129.5" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\SQC - Process Treasury Tables\SQC - Process AccountPayable"
+          TopLeft="19.5,5.5" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process AccountReceivable"
+          TopLeft="13,107.5" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process Benefit"
+          TopLeft="40.5,209.5" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process Commitment"
+          TopLeft="27,311.5" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process Contingency"
+          TopLeft="28.0000000000001,413.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process DedicatedCollection"
+          TopLeft="11.0000000000001,515.5" />
+        <NodeLayout
+          Size="250,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process EnvironmentalLiability"
+          TopLeft="5.50000000000006,617.5" />
+        <NodeLayout
+          Size="227,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process FederalEmployee"
+          TopLeft="17.0000000000001,821.5" />
+        <NodeLayout
+          Size="223,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process FiduciaryActivity"
+          TopLeft="19.0000000000001,923.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process GSE"
+          TopLeft="47.5000000000001,1025.5" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process Inventory"
+          TopLeft="34.0000000000001,1229.5" />
+        <NodeLayout
+          Size="223,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process Loan Receivable"
+          TopLeft="19.0000000000002,1331.5" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process MonetaryAsset"
+          TopLeft="22.5000000000002,1433.5" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process OtherAsset"
+          TopLeft="31.0000000000002,1535.5" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process OtherLiability"
+          TopLeft="26.0000000000002,1637.5" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process Property"
+          TopLeft="37.0000000000002,1739.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\SQC - Process Treasury Tables\SQL - Process Security"
+          TopLeft="38.0000000000002,1841.5" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\SQC - Process Treasury Tables\SQL -Process FederalDebt"
+          TopLeft="30.0000000000001,719.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\SQC - Process Treasury Tables\SQL -Process Insurance"
+          TopLeft="35.5000000000001,1127.5" />
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 1]"
+          TopLeft="130.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 10]"
+          TopLeft="130.5,1067.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 11]"
+          TopLeft="130.5,1169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 12]"
+          TopLeft="130.5,1271.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 13]"
+          TopLeft="130.5,1373.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 14]"
+          TopLeft="130.5,1475.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 15]"
+          TopLeft="130.5,1577.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 16]"
+          TopLeft="130.5,1679.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 17]"
+          TopLeft="130.5,1781.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 2]"
+          TopLeft="130.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 3]"
+          TopLeft="130.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 4]"
+          TopLeft="130.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 5]"
+          TopLeft="130.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 6]"
+          TopLeft="130.5,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 7]"
+          TopLeft="130.5,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 8]"
+          TopLeft="130.5,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SQC - Process Treasury Tables.PrecedenceConstraints[Constraint 9]"
+          TopLeft="130.5,965.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="261,1938"
+          Size="261,1982"
+          Id="Package\SQC - Process Treasury Tables"
+          TopLeft="271.5,211.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="108,151.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,1002"
+              Start="0,0"
+              End="0,994.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,994.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="402,151.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000002"
+              Start="0,0"
+              End="0,52.5000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="178,42"
+          Id="Package\SQC - Finance\Financial Statements"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="189,102"
+          Size="189,146"
+          Id="Package\SQC - Finance"
+          TopLeft="914.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="1009,151.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,876"
+              Start="0,0"
+              End="0,868.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,868.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Sequence Container\Federal Land"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="151,102"
+          Size="151,146"
+          Id="Package\Sequence Container"
+          TopLeft="1672.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="1748,151.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,978"
+              Start="0,0"
+              End="0,970.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,970.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
